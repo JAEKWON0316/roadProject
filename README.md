@@ -5,7 +5,7 @@
 # 배포주소
 > 도메인
 >
-> <a href=" http://www.ezroad.kr/ ">www.ezroad.kr</a>
+> <a href="http://www.ezroad.kr/">www.ezroad.kr</a>
 ***
 # 웹개발팀 소개
 |안 효근|이 재권|
