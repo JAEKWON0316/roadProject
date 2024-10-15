@@ -5,12 +5,12 @@
 # 배포주소
 > 도메인
 >
-> <a href="ezenroad.com">ezenroad.com</a>
+> <a href=" http://www.ezroad.kr/ ">www.ezroad.kr</a>
 ***
 # 웹개발팀 소개
-|김 재영|김 환이|안 효근|이 재권|
-|------|---|---|---|
-|<img src="https://github.com/user-attachments/assets/5b2a6b60-441e-4770-ad6d-6fa3d4d37d15" width="150" height="150">|<img src="https://github.com/user-attachments/assets/45c3ef56-5428-43dd-87ee-26b9b149b130" width="150" height="150">|<img src="https://github.com/user-attachments/assets/5833d298-f212-4dbd-ad71-ec8b4c375ef5" width="150" height="150">|<img src="https://github.com/user-attachments/assets/9799eb7a-8da1-4c2f-b505-17e7803c6770" width="150" height="150">|
+|안 효근|이 재권|
+|------|---|
+|<img src="https://github.com/user-attachments/assets/5833d298-f212-4dbd-ad71-ec8b4c375ef5" width="150" height="150">|<img src="https://github.com/user-attachments/assets/9799eb7a-8da1-4c2f-b505-17e7803c6770" width="150" height="150">|
 # 디자인팀 소개
 |김 예진|이 은지|
 |------|---|
