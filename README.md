@@ -5,13 +5,12 @@
 # 배포주소
 > 도메인
 >
-> <a href="http://www.ezroad.kr/">www.ezroad.kr</a> <span>현재 더 나은 배포환경을 위해 수정중에 있습니다.</span>
+> <a href="http://www.ezroad.kr/">www.ezroad.kr</a>
 ***
-# 소개
+# 개발자 소개
 |이 재권|
-|------|---|
+|------|
 |<img src="RoadProject/src/main/webapp/resources/images/pr_img3.jpg" width="150" height="150">|
-
 # 프로젝트 소개
 > 지역 맛집을 찾는 보다 편한 검색 및 이용자들의 자유로운 맛집 커뮤니티 생성
 ***
@@ -42,15 +41,11 @@ $ cd TeamProject
 
  |메인1|메인2|
  |---|---|
- |<img src="RoadProject/src/main/webapp/resources/images/main01.png" width="600" height="400">|<img src="RoadProject/src/main/webapp/resources/images/main02.png" width="600" height="400">|
+ |<img src="https://github.com/user-attachments/assets/8a173180-9a4d-44d7-99fa-35b4788e1cd3" width="600" height="400">|<img src="https://github.com/user-attachments/assets/3dca297d-ed46-461c-a04c-b35cdfa4ffa9" width="600" height="400">|
 
- |메뉴1|메뉴2|
+ |메인3|메인4|
  |---|---|
- |<img src="RoadProject/src/main/webapp/resources/images/menu02.png" width="600" height="400">|<img src="RoadProject/src/main/webapp/resources/images/menu04.png" width="600" height="400">|
-
- |메뉴3|메뉴4|
- |---|---|
- |<img src="RoadProject/src/main/webapp/resources/images/menu05.png" width="600" height="400">|<img src="RoadProject/src/main/webapp/resources/images/menu06.png" width="600" height="400">|
+ |<img src="https://github.com/user-attachments/assets/0cead874-aeb7-4a52-ba5f-9ff06b646e3c" width="600" height="400">|<img src="https://github.com/user-attachments/assets/c11fe3dd-f4ec-4bd4-9b22-2054698ec95b" width="600" height="400">|
 
 > 관리자 페이지
 
