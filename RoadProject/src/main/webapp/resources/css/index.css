@@ -510,6 +510,9 @@ gap: 20px;
 #innerBox4{
     width: 223px;
 }
+#innerBox4:hover{
+	cursor:pointer;
+}
 
 .Mainbox5{
     display: flex;

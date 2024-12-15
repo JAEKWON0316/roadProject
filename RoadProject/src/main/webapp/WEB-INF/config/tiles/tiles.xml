@@ -19,7 +19,14 @@
         <put-attribute name="title" value="테마 페이지" />
         <put-attribute name="header" value="/WEB-INF/template/header3.jsp"/>
         <put-attribute name="content" value="/WEB-INF/views/map/{1}.jsp"/> 
-    </definition>   
+    </definition>  
+    
+    <definition name="layout4" template="/WEB-INF/template/rs_layout.jsp">
+        <put-attribute name="title" value="예약 페이지" />
+        <put-attribute name="header" value="/WEB-INF/template/header4.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/views/rs/{1}.jsp"/> 
+        <put-attribute name="footer" value="/WEB-INF/template/footer2.jsp"/>
+    </definition> 
    
    
    <!-- content -->
@@ -37,6 +44,11 @@
     <!-- 테마 페이지 -->
     <definition name="map/*.tiles" extends="layout3">
         <put-attribute name="content" value="/WEB-INF/views/map/{1}.jsp"/>
+    </definition>
+    
+    <!-- 예약 페이지 -->
+    <definition name="rs/*.tiles" extends="layout4">
+        <put-attribute name="content" value="/WEB-INF/views/rs/{1}.jsp"/>
     </definition>
    
 </tiles-definitions>

@@ -199,6 +199,41 @@ $(function(){
         });
     }
     
+    const innerBox4 = document.getElementById('innerBox4');
+    if(innerBox4){
+        innerBox4.addEventListener('click', function(){
+
+        window.location.href = "rs/reservation_main";
+        });
+    }
+    
+     const partner_info_btn1 = document.getElementById('partner_info_btn1');
+    if(partner_info_btn1){
+        partner_info_btn1.addEventListener('click', function(){
+
+        window.location.href = "wating1";
+        });
+    }
+    
+     const partner_info_btn2 = document.getElementById('partner_info_btn2');
+    if(partner_info_btn2){
+        partner_info_btn2.addEventListener('click', function(){
+
+        window.location.href = "wating2";
+        });
+    }
+    
+    const partner_info_btn3 = document.getElementById('partner_info_btn3');
+    if(partner_info_btn3){
+        partner_info_btn3.addEventListener('click', function(){
+
+        window.location.href = "wating3";
+        });
+    }
+    
+    
+    
+    
 	const cards = document.querySelectorAll('.partner_detail_review_list_card');
 
 
@@ -232,8 +267,56 @@ $(function(){
         	window.location.href = "partnerPage_myreview2";
     	});
 	});
-	
+	const rsbtn = document.querySelectorAll('.storebtn1'); // 모든 스피드 예약 버튼 선택
+let waitingSpeedUsed = false; // 이미 waiting_speed로 이동한 버튼 확인용 변수
+
+rsbtn.forEach(function(button) {
+    button.addEventListener('click', function() {
+        console.log("Button clicked");
+
+        const storeWaitingBtn = this; // 클릭된 버튼을 가져옴
+
+        if (!waitingSpeedUsed && storeWaitingBtn.id === 'store_waiting') {
+            waitingSpeedUsed = true; // waiting_speed로 이동한 버튼 확인
+            console.log('#store_waiting 요소가 존재합니다. waiting_speed로 이동');
+            window.location.href = 'waiting_speed'; // 이동
+        } else {
+            console.log('#store_waiting 요소가 존재하지 않거나 이미 사용됨. waiting_speed2로 이동');
+            window.location.href = 'waiting_speed2'; // 이동
+        }
+    });
 });
+const rsbtn1 = document.querySelectorAll('.storebtn2'); // 모든 스피드 예약 버튼 선택
+
+rsbtn1.forEach(function(button) {
+    button.addEventListener('click', function() {
+        console.log("Button clicked");
+
+		window.location.href = "normalrs";
+    });
+});
+
+const rsbtn2 = document.querySelectorAll('.storebtn3'); // 모든 스피드 예약 버튼 선택
+let smart_mapUsed = false;
+
+rsbtn2.forEach(function(button) {
+    button.addEventListener('click', function() {
+        console.log("Button clicked");
+        
+        const smart_mapBtn = this;
+
+		if (!smart_mapUsed && smart_mapBtn.id === 'smart_map2') {
+            smart_mapUsed = true; // waiting_speed로 이동한 버튼 확인
+            console.log('#store_waiting 요소가 존재합니다. smart_map2로 이동');
+            window.location.href = 'smart_map2'; // 이동
+        } else {
+            console.log('#store_waiting 요소가 존재하지 않거나 이미 사용됨. smart_map로 이동');
+            window.location.href = 'smart_map'; // 이동
+        }
+    });
+});	
+});
+
 
 document.addEventListener('DOMContentLoaded', function () {
 const popup = document.getElementById("partner_detail_review_detailpop1");
@@ -850,3 +933,61 @@ const popup = document.getElementById("menu_add");
         });
     } 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const personCountInput = document.getElementById('personCount');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const decreaseBtn = document.getElementById('decreaseBtn');
+
+    // 초기값 설정
+    personCountInput.value = 1;
+
+    // 인원 수 증가 버튼 클릭 이벤트
+    increaseBtn.onclick = function () {
+        let currentValue = parseInt(personCountInput.value);
+        if (isNaN(currentValue) || currentValue < 1) {
+            currentValue = 1;
+        }
+        personCountInput.value = currentValue + 1; // 1씩 증가
+        console.log("인원 수:", personCountInput.value); // 변경된 값 출력
+    };
+
+    // 인원 수 감소 버튼 클릭 이벤트
+    decreaseBtn.onclick = function () {
+        let currentValue = parseInt(personCountInput.value);
+        if (currentValue > 1) {
+            personCountInput.value = currentValue - 1; // 1씩 감소.
+            console.log("인원 수:", personCountInput.value); // 변경된 값 출력
+        }
+    };
+
+    // 입력값이 0일 때 1로 변경
+    personCountInput.onchange = function () {
+        let currentValue = parseInt(personCountInput.value);
+        if (isNaN(currentValue) || currentValue <= 0) {
+            personCountInput.value = 1; // 0 또는 NaN이면 1로 변경
+            console.log("인원 수:", personCountInput.value); // 변경된 값 출력
+        }
+    };
+});
+
+
+
+
+ document.addEventListener('DOMContentLoaded', function () {
+        const resetButton = document.querySelector('.back_btn');
+
+        resetButton.addEventListener('click', function (event) {
+            console.log('Reset button clicked');
+        });
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('reset', function (event) {
+            console.log('Form has been reset');
+        });
+
+        form.addEventListener('submit', function (event) {
+            console.log('Form submitted');
+        });
+    });

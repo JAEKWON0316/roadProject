@@ -1,0 +1,853 @@
+#rscontainer{
+    width: 710px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    position: relative;
+    top: 65px;
+    left: 50%; /* 수평 중앙 */
+    transform: translateX(-50%); /* 수평 중앙 조정 */
+    padding-bottom:120px;
+}
+
+
+#rs_popup {
+    
+    display: flex;
+    gap: 24px;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 640px;
+    margin-top:10px;
+    margin-bottom:10px;
+    
+}
+
+#rs_popup>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    margin-top:-24px;
+    }
+
+        /* 상호명 및 주소 */
+
+#rs_popup .market_info {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+
+}
+
+#rs_popup .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#rs_popup .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#rs_popup .market_info .name>p:last-child {
+   padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    font-family: "Pretendard Variable";
+    margin-top:2px;
+}
+
+#rs_popup .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#rs_popup .market_info .adds>li:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#rs_popup .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    
+}
+
+#rs_popup .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#rs_popup .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#rs_popup .market_info .pic_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#rs_popup .market_info .pic_box div {
+    width: 173px; height: 99px; 
+    background: #e6e6e6;
+}
+
+/* 이용 및 인원수 선택 박스*/
+
+#rs_popup .input_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+#rs_popup .input_box>div>p {
+    font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+
+#rs_popup .input_box>div>p span {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #FF4147;
+}
+
+#rs_popup .input_box div>div {
+    width: 560px; height: 52px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 8px;
+    padding: 15px 16px;
+    display: flex;
+    position: relative;
+}
+
+#rs_popup .input_box div>div>p {
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #111;
+}
+
+#rs_popup .input_box>.person>.person_box>.per_inone {
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+/* 이용 및 인원수 선택 박스 설정창 아이콘 설정 */
+
+#rs_popup .input_box div>div img {
+    position: absolute; right: 16px;
+    width: 16px; height: 16px;
+    cursor: pointer;
+    top: 50%; transform: translateY(-50%);
+}
+
+#rs_popup .input_box .person .person_box img:first-child {
+    position: absolute; left: 16px; 
+    width: 16px; height: 16px;
+    cursor: pointer;
+    top: 50%; transform: translateY(-50%);
+}
+.person_box>input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    border:0;
+    text-align:center;
+}
+
+.person_box>input[type="number"]::-webkit-inner-spin-button,
+.person_box>input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* Chrome, Safari */
+    margin: 0; /* 기본 여백 제거 */
+}
+/* 안내문 박스 설정 */
+
+#rs_popup .pay_box {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #fafafa;
+    width: 560px;
+    margin-top:24px;
+}
+
+#rs_popup .pay_box .icon_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.check_box{
+	accent-color: red;
+}
+.rsactive{
+	background-color:#FF4147 !important;
+	color:#fff !important;
+}
+#rs_popup .pay_box .icon_text_box img {
+    width: 24px; height: 24px;
+}
+
+#rs_popup .pay_box .icon_text_box p {
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+text-decoration-line: underline;
+    margin-bottom:0;
+
+}
+
+#rs_popup .pay_box .che_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#rs_popup .pay_box .che_text_box .check_box {
+    width: 16px; height: 16px;
+    border: 1px solid #808080;
+    background: #fff;
+    border-radius: 2px;
+}
+
+#rs_popup .pay_box .che_text_box p {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #333;
+    margin-bottom:0;
+}
+
+/* 뒤로 가기 버튼 */
+#rs_popup .wait_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top:24px;
+}
+
+#rs_popup .wait_btn .back_btn {
+    width: 180px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #FF4147;
+    color: #FF4147;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#rs_popup .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border: 1px solid #e6e6e6; 
+    border-radius: 8px;
+    background: #FAFAFA;
+    color: #ccc;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* 입력값 결과 css */
+
+#open_cho_result {
+    
+    display: flex;
+    gap: 24px;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 640px;
+}
+
+#open_cho_result>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    }
+
+        /* 상호명 및 주소 */
+
+#open_cho_result .market_info {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+
+}
+
+#open_cho_result .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#open_cho_result .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .name>p:last-child {
+    padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#open_cho_result .market_info .adds>li:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    
+}
+
+#open_cho_result .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho_result .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho_result .market_info .pic_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#open_cho_result .market_info .pic_box div {
+    width: 173px; height: 99px; 
+    background: #e6e6e6;
+}
+
+/* 이용 및 인원수 선택 박스*/
+
+#open_cho_result .input_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+#open_cho_result .input_box>div>p {
+    font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+
+#open_cho_result .input_box>div>p span {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #FF4147;
+}
+
+#open_cho_result .input_box div>div {
+    width: 560px; height: 52px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 8px;
+    padding: 15px 16px;
+    display: flex;
+    position: relative;
+}
+
+#open_cho_result .input_box div>div>p {
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #111;
+}
+
+#open_cho_result .input_box>.person>.person_box>.per_inone {
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+/* 이용 및 인원수 선택 박스 설정창 아이콘 설정 */
+
+#open_cho_result .input_box div>div img {
+    position: absolute; right: 16px;
+    width: 16px; height: 16px;
+    cursor: pointer;
+}
+
+#open_cho_result .input_box .person .person_box img:first-child {
+    position: absolute; left: 16px; 
+    width: 16px; height: 16px;
+    cursor: pointer;
+}
+
+/* 안내문 박스 설정 */
+
+#open_cho_result .pay_box {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #fafafa;
+    width: 560px;
+}
+
+#open_cho_result .pay_box .icon_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho_result .pay_box .icon_text_box img {
+    width: 24px; height: 24px;
+}
+
+#open_cho_result .pay_box .icon_text_box p {
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+text-decoration-line: underline;
+margin-bottom:0;
+
+}
+
+#open_cho_result .pay_box .che_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho_result .pay_box .che_text_box .check_box {
+    width: 16px; height: 16px;
+}
+
+#open_cho_result .pay_box .che_text_box .check_box img {
+    width: 100%; height: 100%;
+}
+
+#open_cho_result .pay_box .che_text_box p {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #333;
+}
+
+/* 뒤로 가기 버튼 */
+#open_cho_result .wait_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#open_cho_result .wait_btn .back_btn {
+    width: 180px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #FF4147;
+    color: #FF4147;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#open_cho_result .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #FF4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#dateInput {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    cursor:default;
+    outline: none; /* 포커스 시 테두리 제거 */
+}
+
+#time_box {
+    position: relative !important;
+}
+
+#timeInput {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none; /* 포커스 시 테두리 제거 */
+}
+
+.dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#dropdownMenu {
+    position: absolute !important; /* 절대 위치로 설정 */
+    top: 100%; /* 부모 요소의 아래쪽에 위치 */
+    left: 50%; /* 부모 요소의 중앙에 위치 */
+    width: 100% !important; /* 부모 요소의 너비에 맞춤 */
+    height: auto !important;
+    transform: translateX(-50%); /* 중앙 정렬 */
+    background-color: white; /* 배경색 설정 */
+    border: 1px solid #ccc; /* 테두리 설정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+    z-index: 1000; /* 다른 요소들 위에 표시 */
+    display: none; /* 기본적으로 숨김 */
+}
+
+.dropdown-item {
+	width:100% !important;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+#time_select{
+    display: flex;
+    width: 740px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px; background: #FFF;
+    margin-bottom: 20px;
+}
+#time_select .subtitle{
+    display: flex;
+    height: 52px;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    background: var(--mono-color-fafafa, #FAFAFA);
+    
+}
+#time_select .subtitle p{
+    color: #181818;
+text-align: center;
+
+/* KO text 🇰🇷/body text/sm */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+}
+.time_list{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding:0;
+}
+#time_select .time_list>li{
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    display: flex;
+    padding: 15px 16px;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--main-color-100, #FF4147);
+    background: var(--mono-color-fff, #fff);
+    color: var(--main-color-100, #FF4147);
+    text-align: center;
+    /* etc font 🇺🇸 (eng,num)/btn/md */
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    cursor: pointer;
+}
+#time_select .time_list>li.on{
+    background: var(--main-color-100, #FF4147);
+    color: var(--mono-color-fff, #FFF);
+}
+#time_select .time_list>li.disable{
+    border: 1px solid var(--mono-color-e-6-e-6-e-6, #E6E6E6);
+    background: var(--mono-color-fafafa, #FAFAFA);
+    color: var(--mono-color-ccc, #CCC);
+    cursor: not-allowed;
+}
+.main_btn{
+    display: flex;
+    width: 348px;
+    height: 50px;
+    padding: 15px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    background: var(--main-color-100, #FF4147);
+    color: var(--mono-color-fff, #FFF);
+    text-align: center;
+    /* KO text 🇰🇷/btn/md */
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    cursor: pointer;
+}
+.main_btn.small{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--main-color-100, #FF4147);
+    background: var(--mono-color-fff, #FF4147);
+    border-radius: 8px;
+    color: var(--main-color-100, #FFF);
+    text-align: center;
+    /* KO text 🇰🇷/btn/md */
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    cursor: pointer;
+}
+.second_btn.small{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 4px;
+    border-radius: 8px;
+    border: 1px solid var(--main-color-100, #FF4147);
+    background: var(--mono-color-fff, #FFF);
+    border-radius: 8px;
+    color: var(--main-color-100, #FF4147);
+    text-align: center;
+    /* KO text 🇰🇷/btn/md */
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    cursor: pointer;
+}
+.btn_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.title{
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+#time_select .title p{
+    color: var(--mono-color-333, #333);
+    text-align: center;
+    /* KO text 🇰🇷/title/sm */
+    font-family: "Pretendard Variable";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 31px; /* 129.167% */
+}

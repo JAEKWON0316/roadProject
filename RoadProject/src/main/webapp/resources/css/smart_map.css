@@ -1,0 +1,197 @@
+.smart_map_div1 {
+    position: relative;
+    line-height: 31px;
+    font-weight: 600;
+}
+.smart_map_div2 {
+    position: relative;
+    line-height: 20px;
+}
+.smart_map_img {
+    align-self: stretch;
+    background-color: #fafafa;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px;
+    font-size: 14px;
+}
+.smart_map_bg-icon {
+    position: absolute;
+    top: 361px;
+    left: 0px;
+    width: 560px;
+    height: 390px;
+    object-fit: cover;
+}
+.smart_map_search-light-icon {
+    width: 16px;
+    position: relative;
+    height: 16px;
+}
+.smart_map_text {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+}
+.smart_map_input-token {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.smart_map_input-box-token {
+    position: absolute;
+    top: 14px;
+    left: calc(50% - 242px);
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    width: 485px;
+    height: 52px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px 16px;
+    gap: 4px;
+}
+.smart_map_div3 {
+    width: 560px;
+    position: relative;
+    background-color: #fff;
+    height: 289px;
+    overflow: hidden;
+    flex-shrink: 0;
+    text-align: left;
+    font-size: 16px;
+    color: #808080;
+}
+.smart_map_div4 {
+    width: 16px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #fff;
+    border: 1px solid #808080;
+    box-sizing: border-box;
+    height: 16px;
+}
+.smart_map_text1 {
+    position: relative;
+    text-decoration: underline;
+    line-height: 20px;
+    font-weight: 600;
+}
+.smart_map_check-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+    font-size: 14px;
+    color: #808080;
+}
+#locationConsent{
+	accent-color: red;
+}
+.smart_map_check-text>label{
+	margin-bottom:0;
+}
+.smart_map_text3 {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    font-weight: 500;
+}
+.smart_map_text3:hover{
+	cursor:pointer;
+}
+.smart_map_btn-token {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+}
+.smart_map_small-btn-for-madal {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.smart_map_btn-token1 {
+    flex: 1;
+    border-radius: 8px;
+    background-color: #ff4147;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+}
+.smart_map_small-btn-for-madal1 {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.smart_map_btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #ccc;
+}
+.smart_map_content {
+    align-self: stretch;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px;
+    gap: 16px;
+    z-index: 0;
+}
+.smart_map_close-square-light-icon {
+    width: 24px;
+    position: absolute;
+    margin: 0 !important;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    z-index: 1;
+}
+.smart_map_div {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 24px;
+    color: #181818;
+    font-family: 'Pretendard Variable';
+}
+
+ #map {
+        width: 100%;
+        height: 100%;
+    }

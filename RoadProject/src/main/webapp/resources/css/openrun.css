@@ -1,0 +1,617 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Pretendard Variable", 
+    Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", 
+    "Segoe UI", "Apple SD Gothic Neo", 
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    background: #333;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+button {outline: none; background: none;}
+
+#open_cho {
+    
+    display: flex;
+    gap: 24px;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 640px;
+}
+
+#open_cho>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    }
+
+        /* 상호명 및 주소 */
+
+#open_cho .market_info {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+
+}
+
+#open_cho .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#open_cho .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho .market_info .name>p:last-child {
+    padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#open_cho .market_info .adds>li:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    
+}
+
+#open_cho .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho .market_info .pic_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#open_cho .market_info .pic_box div {
+    width: 173px; height: 99px; 
+    background: #e6e6e6;
+}
+
+/* 이용 및 인원수 선택 박스*/
+
+#open_cho .input_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+#open_cho .input_box>div>p {
+    font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+
+#open_cho .input_box>div>p span {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #FF4147;
+}
+
+#open_cho .input_box div>div {
+    width: 560px; height: 52px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 8px;
+    padding: 15px 16px;
+    display: flex;
+    position: relative;
+}
+
+#open_cho .input_box div>div>p {
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #111;
+}
+
+#open_cho .input_box>.person>.person_box>.per_inone {
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+/* 이용 및 인원수 선택 박스 설정창 아이콘 설정 */
+
+#open_cho .input_box div>div img {
+    position: absolute; right: 16px;
+    width: 16px; height: 16px;
+    cursor: pointer;
+    top: 50%; transform: translateY(-50%);
+}
+
+#open_cho .input_box .person .person_box img:first-child {
+    position: absolute; left: 16px; 
+    width: 16px; height: 16px;
+    cursor: pointer;
+    top: 50%; transform: translateY(-50%);
+}
+
+/* 안내문 박스 설정 */
+
+#open_cho .pay_box {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #fafafa;
+    width: 560px;
+}
+
+#open_cho .pay_box .icon_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho .pay_box .icon_text_box img {
+    width: 24px; height: 24px;
+}
+
+#open_cho .pay_box .icon_text_box p {
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+text-decoration-line: underline;
+
+}
+
+#open_cho .pay_box .che_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho .pay_box .che_text_box .check_box {
+    width: 16px; height: 16px;
+    border: 1px solid #808080;
+    background: #fff;
+    border-radius: 2px;
+}
+
+#open_cho .pay_box .che_text_box p {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #333;
+}
+
+/* 뒤로 가기 버튼 */
+#open_cho .wait_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#open_cho .wait_btn .back_btn {
+    width: 180px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #FF4147;
+    color: #FF4147;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#open_cho .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border: 1px solid #e6e6e6; 
+    border-radius: 8px;
+    background: #FAFAFA;
+    color: #ccc;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* 입력값 결과 css */
+
+#open_cho_result {
+    
+    display: flex;
+    gap: 24px;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #fff;
+    width: 640px;
+}
+
+#open_cho_result>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    }
+
+        /* 상호명 및 주소 */
+
+#open_cho_result .market_info {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+
+}
+
+#open_cho_result .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#open_cho_result .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .name>p:last-child {
+    padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+#open_cho_result .market_info .adds>li:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#open_cho_result .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    
+}
+
+#open_cho_result .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho_result .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#open_cho_result .market_info .pic_box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+}
+
+#open_cho_result .market_info .pic_box div {
+    width: 173px; height: 99px; 
+    background: #e6e6e6;
+}
+
+/* 이용 및 인원수 선택 박스*/
+
+#open_cho_result .input_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+#open_cho_result .input_box>div>p {
+    font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+
+#open_cho_result .input_box>div>p span {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #FF4147;
+}
+
+#open_cho_result .input_box div>div {
+    width: 560px; height: 52px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 8px;
+    padding: 15px 16px;
+    display: flex;
+    position: relative;
+}
+
+#open_cho_result .input_box div>div>p {
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #111;
+}
+
+#open_cho_result .input_box>.person>.person_box>.per_inone {
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+
+/* 이용 및 인원수 선택 박스 설정창 아이콘 설정 */
+
+#open_cho_result .input_box div>div img {
+    position: absolute; right: 16px;
+    width: 16px; height: 16px;
+    cursor: pointer;
+}
+
+#open_cho_result .input_box .person .person_box img:first-child {
+    position: absolute; left: 16px; 
+    width: 16px; height: 16px;
+    cursor: pointer;
+}
+
+/* 안내문 박스 설정 */
+
+#open_cho_result .pay_box {
+    display: flex;
+    padding: 16px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    background-color: #fafafa;
+    width: 560px;
+}
+
+#open_cho_result .pay_box .icon_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho_result .pay_box .icon_text_box img {
+    width: 24px; height: 24px;
+}
+
+#open_cho_result .pay_box .icon_text_box p {
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+text-decoration-line: underline;
+
+}
+
+#open_cho_result .pay_box .che_text_box {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+#open_cho_result .pay_box .che_text_box .check_box {
+    width: 16px; height: 16px;
+}
+
+#open_cho_result .pay_box .che_text_box .check_box img {
+    width: 100%; height: 100%;
+}
+
+#open_cho_result .pay_box .che_text_box p {
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    color: #333;
+}
+
+/* 뒤로 가기 버튼 */
+#open_cho_result .wait_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#open_cho_result .wait_btn .back_btn {
+    width: 180px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #FF4147;
+    color: #FF4147;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#open_cho_result .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #FF4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,479 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Pretendard Variable", 
+    Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", 
+    "Segoe UI", "Apple SD Gothic Neo", 
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", 
+    "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+button {outline: none; background: none;}
+a {text-decoration: none;}
+
+#open_calendar {
+    width: 100%;
+    max-width: 710px; /* 최대 너비 설정 */
+    background-color: #fff;
+    position: fixed; /* fixed로 변경 */
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변환 */
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    z-index: 1000; /* 다른 요소 위에 표시되도록 설정 */
+}
+
+
+#open_calendar .close_icon {
+    width: 24px; height: 24px;
+    background: url("../images/icon/Close_square_light.png")no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#open_calendar p {
+    color: #181818;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.096px;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    margin: 0 auto;
+    }
+
+#open_calendar .infor_box {
+    width: 630px; height: 52px;
+    padding: 16px 0;
+    background: #fafafa;
+}
+
+#open_calendar .infor_box p {
+    color: #181818;
+    text-align: center;
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+}
+
+#open_calendar .day_title {
+    display: flex;
+    justify-content: space-between;
+    width: 630px; height: 25px;
+    align-items: center;
+}
+
+#open_calendar .day_title .none a {
+    color: #fff;
+}
+
+#open_calendar .day_title .title a {
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    text-decoration: none;
+    position: relative;
+}
+
+#open_calendar .day_title .title a::before {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -29px; top: 50%;
+    transform: translateY(-50%);
+    width: 25px; height: 25px;
+    background: url("../images/달력_icon/Expand_down_light.png") no-repeat;
+}
+
+#open_calendar .day_title .today a {
+    color: var(--main-color-100, #FF4147);
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    text-decoration-line: underline;
+} 
+
+#open_calendar .weeks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 630px;
+}
+
+#open_calendar .weeks li a {
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+}
+
+#open_calendar .weeks li:first-child a {
+    color: #FF4147;
+}
+
+#open_calendar .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+#open_calendar .calendar ul {
+    width: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+#open_calendar .calendar ul li a {
+    display: block;
+    width: 48px; height: 48px;
+    line-height: 48px;
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.064px;
+    text-align: center;
+}
+
+#open_calendar .calendar .no_day li a {
+    display: block;
+    width: 48px; height: 48px;
+}
+
+#open_calendar .calendar .no_day .white a {
+    color: #fff;
+} 
+
+#open_calendar .calendar ul .gray a {
+    color: #ccc;
+} 
+
+#open_calendar .calendar ul .today a {
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+#open_calendar .calendar ul .today a::before {
+    content: '';
+    background: #FF4147;
+    position: absolute;
+    top: 0; left: 0;
+    width: 48px; height: 48px;
+    border-radius: 99999px;
+    z-index: -1;
+} 
+
+#open_calendar .wait_btn {
+    width: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 47px;
+}
+
+#open_calendar  .wait_btn .back_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid #e6e6e6;
+    color: #CCC;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#open_calendar .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #ff4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* 두번째 달력 */
+
+#open_calendar_2 {
+    
+    width: 710px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    width: 710px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px
+}
+
+#open_calendar_2  .close_icon {
+    width: 24px; height: 24px;
+    background: url("../images/icon/Close_square_light.png")no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+#open_calendar_2  p {
+    color: #181818;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: -0.096px;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    margin: 0 auto;
+    }
+
+#open_calendar_2  .infor_box {
+    width: 630px; height: 52px;
+    padding: 16px 0;
+    background: #fafafa;
+}
+
+#open_calendar_2  .infor_box p {
+    color: #181818;
+    text-align: center;
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+}
+
+#open_calendar_2  .day_title {
+    display: flex;
+    justify-content: space-between;
+    width: 630px; height: 25px;
+    align-items: center;
+}
+
+#open_calendar_2  .day_title .none a {
+    color: #fff;
+}
+
+#open_calendar_2  .day_title .title a {
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    text-decoration: none;
+    position: relative;
+}
+
+#open_calendar_2  .day_title .title a::before {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -29px; top: 50%;
+    transform: translateY(-50%);
+    width: 25px; height: 25px;
+    background: url("../images/달력_icon/Expand_down_light.png") no-repeat;
+}
+
+#open_calendar_2 .day_title .today a {
+    color: var(--main-color-100, #FF4147);
+    font-family: "Pretendard Variable";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: -0.056px;
+    text-decoration-line: underline;
+} 
+
+#open_calendar_2  .weeks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 630px;
+}
+
+#open_calendar_2  .weeks li a {
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+}
+
+#open_calendar_2  .weeks li:first-child a {
+    color: #FF4147;
+}
+
+#open_calendar_2  .calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    align-self: stretch;
+}
+
+#open_calendar_2  .calendar ul {
+    width: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+#open_calendar_2  .calendar ul li a {
+    display: block;
+    width: 48px; height: 48px;
+    line-height: 48px;
+    color: var(--mono-color-333, #333);
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.064px;
+    text-align: center;
+}
+
+#open_calendar_2  .calendar .no_day li a {
+    display: block;
+    width: 48px; height: 48px;
+}
+
+#open_calendar_2  .calendar .no_day .white a {
+    color: #fff;
+} 
+
+#open_calendar_2  .calendar ul .gray a {
+    color: #ccc;
+} 
+
+#open_calendar_2  .calendar ul .today a {
+    color: #fff;
+    position: relative;
+    z-index: 100;
+}
+
+#open_calendar_2  .calendar ul .today a::before {
+    content: '';
+    background: #FF4147;
+    position: absolute;
+    top: 0; left: 0;
+    width: 48px; height: 48px;
+    border-radius: 99999px;
+    z-index: -1;
+} 
+
+#open_calendar_2 .wait_btn {
+    width: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 47px;
+}
+
+#open_calendar_2  .wait_btn .back_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid #e6e6e6;
+    color: #CCC;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#open_calendar_2 .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #ff4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: red; /* 선택된 날짜의 배경 색 */
+    color: white !important; /* 텍스트 색 */
+    border-radius: 50%; /* 원형으로 만들기 */
+    width: 30px; /* 크기 조정 */
+    height: 30px; /* 크기 조정 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.no-today {
+    display: block !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important; 
+    color: var(--mono-color-333, #333) !important;
+    font-family: "Pretendard Variable" !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.064px !important;
+    text-align: center !important;
+}
+.link-no-today {
+    background: white !important; /* 배경색을 흰색으로 설정 */
+}
+.between{
+	color:red !important;
+}

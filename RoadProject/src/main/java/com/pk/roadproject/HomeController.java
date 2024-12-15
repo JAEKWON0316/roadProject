@@ -14,18 +14,23 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.pk.dao.RestaurantDao;
 import com.pk.dto.MemberDto;
 import com.pk.dto.RestaurantDto;
+import com.pk.dto.RservationDto;
 import com.pk.service.GetRestService;
 import com.pk.service.MemberService;
 import com.pk.service.MenuGetListService;
 import com.pk.service.MenupanGetListService;
+import com.pk.service.ReservationService;
 import com.pk.service.RestTrashFileDel;
 
 /**
@@ -63,6 +68,8 @@ public class HomeController {
 	@Autowired
 	HttpSession session;
 	
+	@Autowired
+    private ReservationService reservationService;
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
@@ -486,6 +493,407 @@ public class HomeController {
 	        return "partneredit2.tiles";
 	    }
 	  
+	  //rs
+	  @RequestMapping(value = "/openrun1", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String openrun1(Locale locale, Model model) {
+	        logger.info("openrun1 접속");
+	        
+	        return "openrun1.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/openrun2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String openrun2(Locale locale, Model model) {
+	        logger.info("openrun2 접속");
+	        
+	        return "openrun2.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/openrun3", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String openrun3(Locale locale, Model model) {
+	        logger.info("openrun1 접속");
+	        
+	        return "openrun3.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/rs/reservation_main", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String reservation_main(Locale locale, Model model) {
+	        logger.info("reservation_main 접속");
+	        
+	        return "rs/reservation_main.tiles";
+	    }
+	  @RequestMapping(value = "/rs/normalrs", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String normalrs(Locale locale, Model model) {
+	        logger.info("normalrs 접속");
+	        
+	        return "rs/normalrs.tiles";
+	    }
+	  @RequestMapping(value = "/rs/normalrs2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String normalrs2(Locale locale, Model model) {
+	        logger.info("normalrs2 접속");
+	        
+	        return "rs/normalrs2.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/rs/speedrs", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String speedrs(Locale locale, Model model) {
+	        logger.info("speedrs 접속");
+	        
+	        return "rs/speedrs.tiles";
+	    }
+	  @RequestMapping(value = "/rs/speedrs2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String speedrs2(Locale locale, Model model) {
+	        logger.info("speedrs2 접속");
+	        
+	        return "rs/speedrs2.tiles";
+	    }
+	  @RequestMapping(value = "/rs/smartrs", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String smartrs(Locale locale, Model model) {
+	        logger.info("smartrs 접속");
+	        
+	        return "rs/smartrs.tiles";
+	    }
+	  @RequestMapping(value = "/rs/smartrs2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String smartrs2(Locale locale, Model model) {
+	        logger.info("smartrs2 접속");
+	        
+	        return "rs/smartrs2.tiles";
+	    }
+	  @RequestMapping(value = "/rs/smartrs3", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String smartrs3(Locale locale, Model model) {
+	        logger.info("smartrs3 접속");
+	        
+	        return "rs/smartrs3.tiles";
+	    }
+	  @RequestMapping(value = "/rs/smart_loading", method = {RequestMethod.GET, RequestMethod.POST})
+	  public String smart_loading(HttpServletRequest request, HttpSession session, Locale locale, Model model) {
+	      logger.info("smart_loading 접속");
+
+	      // 사용자가 입력한 날짜와 키워드를 가져옵니다.
+	      String selectedDate = (String) session.getAttribute("selectedDate"); // 세션에서 날짜 값 가져오기
+	      String selectedKeywords = request.getParameter("keywords");
+	      String personCountStr = request.getParameter("personCount");
+
+	      // 인원 수를 정수로 변환하고 세션에 저장합니다. null일 경우 기본값 1로 설정.
+	      int personCount = (personCountStr != null) ? Integer.parseInt(personCountStr) : 1;
+	      session.setAttribute("personCount", personCount);
+
+	      // 세션에 저장합니다.
+	      session.setAttribute("selectedDate", selectedDate);
+	      session.setAttribute("selectedKeywords", selectedKeywords);
+	      
+	      logger.info("resDay: " + selectedDate);
+	      logger.info("resKeyword" + selectedKeywords);
+	      logger.info("resKeyword" + personCount);
+	      
+
+	      return "rs/smart_loading.tiles";
+	  }
+	  
+	  @RequestMapping(value = "/rs/smart_ok", method = {RequestMethod.GET, RequestMethod.POST})
+	  public String smart_ok(HttpServletRequest request, HttpSession session, Locale locale, Model model) {
+	      logger.info("smart_ok 접속");
+	      
+
+	  
+
+	   // 세션에서 값 가져오기
+	      String userid = (String) session.getAttribute("nickname");
+	      String usertel = (String) session.getAttribute("phone");
+	      String rtAddr1 = "인천광역시 부평구";
+	      String rtAddr2 = "부평대로 44";
+	      String rtTel = "000-000-0000";
+	      String rtName = "{상호명}";
+	      Integer resNum = (Integer) session.getAttribute("personCount");
+	      String resTime = (String) session.getAttribute("selectedTime");
+
+	      // null 체크 및 기본값 설정
+	      String resDay = (String) session.getAttribute("selectedDate");
+	      if (resDay == null) {
+	          resDay = request.getParameter("selectedDate");
+	      }
+
+	      if (resDay == null) {
+	          resDay = "없음"; // 둘 다 없을 경우 "없음"으로 설정
+	      }
+	      String resKeyword = (String) session.getAttribute("selectedKeywords");
+	      if (resKeyword == null) {
+	          resKeyword = "없음";
+	      }
+
+	      int rtCode = 11111;
+	      
+	      logger.info("userid: " + userid);
+	      logger.info("usertel: " + usertel);
+	      logger.info("resNum: " + resNum);
+	      logger.info("resTime: " + resTime);
+	      logger.info("resDay: " + resDay);
+	      logger.info("resKeyword" + resKeyword);
+
+
+	      // DTO 생성
+	      RservationDto reservation = new RservationDto();
+	      reservation.setUserid(userid);
+	      reservation.setUsertel(usertel);
+	      reservation.setRtCode(rtCode);
+	      reservation.setRtAddr1(rtAddr1);
+	      reservation.setRtAddr2(rtAddr2);
+	      reservation.setRtTel(rtTel);
+	      reservation.setRtName(rtName);
+	      reservation.setResNum(resNum);
+	      reservation.setResTime(resTime);
+	      reservation.setResDay(resDay);
+	      reservation.setResKeyword(resKeyword);
+
+	      // DB에 예약 저장
+	      reservationService.saveReservation(reservation);
+
+	      return "rs/smart_ok.tiles";
+	  }
+	  @RequestMapping(value = "/rs/smart_map", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String smart_map(Locale locale, Model model) {
+	        logger.info("smart_map 접속");
+	        
+	        return "rs/smart_map.tiles";
+	    }
+	  @RequestMapping(value = "/rs/smart_map2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String smart_map2(Locale locale, Model model) {
+	        logger.info("smart_map2 접속");
+	        
+	        return "rs/smart_map2.tiles";
+	    }
+	  @RequestMapping(value = "/rs/speedrs_ok", method = {RequestMethod.GET, RequestMethod.POST})
+	  public String speedrs_ok(HttpSession session, Locale locale, Model model) {
+	      logger.info("speedrs_ok 접속");
+	      
+
+	  
+
+	   // 세션에서 값 가져오기
+	      String userid = (String) session.getAttribute("nickname");
+	      String usertel = (String) session.getAttribute("phone");
+	      String rtAddr1 = "인천광역시 부평구";
+	      String rtAddr2 = "부평대로 44";
+	      String rtTel = "000-000-0000";
+	      String rtName = "{상호명}";
+	      Integer resNum = (Integer) session.getAttribute("personCount");
+	      String resTime = (String) session.getAttribute("selectedTime");
+
+	      // null 체크 및 기본값 설정
+	      String resDay = (String) session.getAttribute("selectedDate");
+	      if (resDay == null) {
+	          resDay = "없음";
+	      }
+
+	      String resKeyword = (String) session.getAttribute("selectedKeywordString");
+	      if (resKeyword == null) {
+	          resKeyword = "없음";
+	      }
+
+	      int rtCode = 11111;
+	      
+	      logger.info("userid: " + userid);
+	      logger.info("usertel: " + usertel);
+	      logger.info("resNum: " + resNum);
+	      logger.info("resTime: " + resTime);
+	      logger.info("resDay: " + resDay);
+	      logger.info("resKeyword" + resKeyword);
+
+
+	      // DTO 생성
+	      RservationDto reservation = new RservationDto();
+	      reservation.setUserid(userid);
+	      reservation.setUsertel(usertel);
+	      reservation.setRtCode(rtCode);
+	      reservation.setRtAddr1(rtAddr1);
+	      reservation.setRtAddr2(rtAddr2);
+	      reservation.setRtTel(rtTel);
+	      reservation.setRtName(rtName);
+	      reservation.setResNum(resNum);
+	      reservation.setResTime(resTime);
+	      reservation.setResDay(resDay);
+	      reservation.setResKeyword(resKeyword);
+
+	      // DB에 예약 저장
+	      reservationService.saveReservation(reservation);
+
+	      return "rs/speedrs_ok.tiles";
+	  }
+	  @RequestMapping(value = "/rs/speedrs_fail", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String speedrs_fail(Locale locale, Model model) {
+	        logger.info("speedrs_fail 접속");
+	        
+	        return "rs/speedrs_fail.tiles";
+	    }
+	  @RequestMapping(value = "/rs/normalrs_ok", method = {RequestMethod.GET, RequestMethod.POST})
+	  public String normalrs_ok(HttpSession session, Locale locale, Model model) {
+	      logger.info("normalrs_ok 접속");
+	      
+
+	  
+
+	   // 세션에서 값 가져오기
+	      String userid = (String) session.getAttribute("nickname");
+	      String usertel = (String) session.getAttribute("phone");
+	      String rtAddr1 = "인천광역시 부평구";
+	      String rtAddr2 = "부평대로 44";
+	      String rtTel = "000-000-0000";
+	      String rtName = "{상호명}";
+	      Integer resNum = (Integer) session.getAttribute("personCount");
+	      String resTime = (String) session.getAttribute("selectedTime");
+
+	      // null 체크 및 기본값 설정
+	      String resDay = (String) session.getAttribute("selectedDate");
+	      if (resDay == null) {
+	          resDay = "없음";
+	      }
+
+	      String resKeyword = (String) session.getAttribute("selectedKeywordString");
+	      if (resKeyword == null) {
+	          resKeyword = "없음";
+	      }
+
+	      int rtCode = 11111;
+	      
+	      logger.info("userid: " + userid);
+	      logger.info("usertel: " + usertel);
+	      logger.info("resNum: " + resNum);
+	      logger.info("resTime: " + resTime);
+	      logger.info("resDay: " + resDay);
+	      logger.info("resKeyword" + resKeyword);
+
+
+	      // DTO 생성
+	      RservationDto reservation = new RservationDto();
+	      reservation.setUserid(userid);
+	      reservation.setUsertel(usertel);
+	      reservation.setRtCode(rtCode);
+	      reservation.setRtAddr1(rtAddr1);
+	      reservation.setRtAddr2(rtAddr2);
+	      reservation.setRtTel(rtTel);
+	      reservation.setRtName(rtName);
+	      reservation.setResNum(resNum);
+	      reservation.setResTime(resTime);
+	      reservation.setResDay(resDay);
+	      reservation.setResKeyword(resKeyword);
+
+	      // DB에 예약 저장
+	      reservationService.saveReservation(reservation);
+
+	      return "rs/normalrs_ok.tiles";
+	  }
+	  @RequestMapping(value = "/rs/normalrs_fail", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String normalrs_fail(Locale locale, Model model) {
+	        logger.info("normalrs_fail 접속");
+	        
+	        return "rs/normalrs_fail.tiles";
+	    }
+	  @RequestMapping(value = "/rs/waiting_speed", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String waiting_speed(Locale locale, Model model) {
+	        logger.info("waiting_speed 접속");
+	        
+	        return "rs/waiting_speed.tiles";
+	    }
+	  @RequestMapping(value = "/rs/waiting_speed2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String waiting_speed2(Locale locale, Model model) {
+	        logger.info("waiting_speed2 접속");
+	        
+	        return "rs/waiting_speed2.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/rs/rsCalendar", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String rsCalendar(Locale locale, Model model) {
+	        logger.info("rsCalendar 접속");
+	        
+	        return "rs/rsCalendar";
+	    }
+	  @RequestMapping(value = "/rs/rsCalendar2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String rsCalendar2(Locale locale, Model model) {
+	        logger.info("rsCalendar2 접속");
+	        
+	        return "rs/rsCalendar2";
+	    }
+	  @RequestMapping(value = "/rs/rsCalendar3", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String rsCalendar3(Locale locale, Model model) {
+	        logger.info("rsCalendar3 접속");
+	        
+	        return "rs/rsCalendar3";
+	    }
+	  
+	  @RequestMapping(value = "/rs/timeselect", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String timeselect(Locale locale, Model model) {
+	        logger.info("timeselect 접속");
+	        
+	        return "rs/timeselect";
+	    }
+	  @RequestMapping(value = "/rs/timeselect2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String timeselect2(Locale locale, Model model) {
+	        logger.info("timeselect2 접속");
+	        
+	        return "rs/timeselect2";
+	    }
+	  @RequestMapping(value = "/rs/timeselect4", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String timeselect4(Locale locale, Model model) {
+	        logger.info("timeselect4 접속");
+	        
+	        return "rs/timeselect4";
+	    }
+	  @RequestMapping(value = "/rs/timeselect3", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String timeselect3(Locale locale, Model model) {
+	        logger.info("timeselect3 접속");
+	        
+	        return "rs/timeselect3";
+	    }
+	  @RequestMapping(value = "/rs/kwselect", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String kwselect(Locale locale, Model model) {
+	        logger.info("kwselect 접속");
+	        
+	        return "rs/kwselect";
+	    }
+	  @RequestMapping(value = "/rs/kwselect2", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String kwselect2(Locale locale, Model model) {
+	        logger.info("kwselect2 접속");
+	        
+	        return "rs/kwselect2";
+	    }
+	  @RequestMapping(value = "/map/rsmap", method = {RequestMethod.GET, RequestMethod.POST})
+	    public String rsmap(Locale locale, Model model) {
+	        logger.info("rsmap 접속");
+	        
+	        return "map/rsmap.tiles";
+	    }
+	  
+	  @RequestMapping(value = "/rs/saveTime", method = RequestMethod.POST)
+	    public String saveTime(HttpServletRequest request, @ModelAttribute("time") String selectedTime) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("selectedTime", selectedTime); // 세션에 시간 저장
+	        System.out.println("시간 저장 완료 : " + selectedTime);
+	        
+	        // 다음 페이지로 리다이렉트
+	        return "rs/saveTime"; // 원하는 페이지로 리다이렉트
+	    }
+	  @RequestMapping(value = "/rs/saveToSession", method = RequestMethod.POST)
+	    public String saveToSession(HttpServletRequest request, @ModelAttribute("time") String selectedTime) {
+	        HttpSession session = request.getSession();
+	        session.setAttribute("saveToSession", selectedTime); // 세션에 시간 저장
+	        System.out.println("시간 저장 완료 : " + selectedTime);
+	        
+	        // 다음 페이지로 리다이렉트
+	        return "rs/saveToSession"; // 원하는 페이지로 리다이렉트
+	    }
+	  
+	  @RequestMapping(value = "/rs/getSessionValue", method = RequestMethod.GET)
+	  @ResponseBody
+	  public String getSessionValue(HttpSession session) {
+	      String selectedDate = (String) session.getAttribute("selectedDate");
+	      return selectedDate != null ? selectedDate : "값이 없습니다.";
+	  }
+	  
+	    @PostMapping("/rs/resetSession")
+	    @ResponseBody
+	    public String resetSession(HttpSession session) {
+	        session.invalidate(); // 세션 무효화
+	        return "세션이 성공적으로 지워졌습니다."; // 응답 메시지
+	    }
 	  
 	  //로그인
 	  @RequestMapping(value = "/searchMember", method = RequestMethod.POST)

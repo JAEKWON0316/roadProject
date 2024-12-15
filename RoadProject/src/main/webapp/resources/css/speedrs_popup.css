@@ -1,0 +1,589 @@
+#popup_wait_1 {
+    width: 640px;
+    height: 538px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+
+}
+
+#popup_wait_1 .close_icon {
+    width: 24px; height: 24px;
+    background: url("../images/icon/Close_square_light.png")no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#popup_wait_1>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    }
+
+    /* 상호명 및 주소 */
+
+#popup_wait_1 .market_info,
+#succese .market_info,
+#fail .market_info
+{
+    width: 576px;
+    height: 87px;
+    padding: 16px 0px;
+    background: var(--mono-color-fafafa, #FAFAFA);
+}
+
+#popup_wait_1 .market_info .name,
+#succese .market_info .name,
+#fail .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#popup_wait_1 .market_info .name>p:first-child,
+#succese .market_info .name>p:first-child,
+#fail .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#popup_wait_1 .market_info .name>p:last-child,
+#succese .market_info .name>p:last-child,
+#fail .market_info .name>p:last-child {
+    padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    font-family: "Pretendard Variable";
+    margin-top:2px;
+}
+
+#popup_wait_1 .market_info .adds,
+#succese .market_info .adds,
+#fail .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#popup_wait_1 .market_info .adds>li:first-child,
+#succese .market_info .adds>li:first-child, 
+#fail .market_info .adds>li:first-child{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#popup_wait_1 .market_info .adds>li:nth-child(2),
+#succese .market_info .adds>li:nth-child(2),
+#fail .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    
+}
+
+#popup_wait_1 .market_info .adds>li:nth-child(3),
+#succese .market_info .adds>li:nth-child(3),
+#fail .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#popup_wait_1 .market_info .adds>li:last-child,
+#succese .market_info .adds>li:last-child
+#fail .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+
+/* 대기 번호 안내 박스 */
+#popup_wait_1 .wait_infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 340px; height: 213px;
+}
+
+
+
+
+
+/* 대기 번호 순서 박스 */
+
+#popup_wait_1 .wait_infor .wait_num {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#popup_wait_1 .wait_infor .wait_num li:first-child {
+    color: #000;
+
+    text-align: center;
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+}
+
+#popup_wait_1 .wait_infor  .wait_num li:nth-child(2) {
+    font-family: "Pretendard Variable";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px; /* 120.833% */
+    letter-spacing: -0.192px;
+    color: #ff4147;
+}
+
+#popup_wait_1 .wait_infor  .wait_num li:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+#popup_wait_1 .wait_infor  .wait_num li:last-child p:first-child {
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    color: #bfbfbf;
+}
+#popup_wait_1 .wait_infor  .wait_num li:last-child p:last-child{
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    color: #ff676c;
+}
+
+/* 대기 박스 아이콘 스타일 */
+/* #popup_wait_1 .wait_infor .wait_icon_box {
+
+} */
+
+#popup_wait_1 .border {
+    width: 1px;
+    height: 31px;
+    background: #fff;
+}
+
+/* 뒤로 가기 버튼 */
+
+#popup_wait_1 .back_btn,
+#fail .back_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #ff4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* -------------- 대기 팝업 2 -------------- */
+
+#popup_wait_2 {
+    
+    width: 640px;
+    height: 538px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 8px;
+    display: flex;
+    padding: 40px 40px 30px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    margin-bottom: 20px;
+
+}
+
+#popup_wait_2 .close_icon {
+    width: 24px; height: 24px;
+    background: url("../images/icon/Close_square_light.png")no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#popup_wait_2>p {
+    color: #181818;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.096px;
+    font-style: normal;
+    font-weight: 600;
+    font-family: "Pretendard Variable";
+    }
+
+    /* 상호명 및 주소 */
+
+#popup_wait_2 .market_info {
+    width: 560px;
+    height: 87px;
+    padding: 16px 0px;
+    background: var(--mono-color-fafafa, #FAFAFA);
+}
+
+#popup_wait_2 .market_info .name {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#popup_wait_1 .market_info .name>p:first-child {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.072px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#popup_wait_2 .market_info .name>p:last-child {
+    padding: 3px 8px;
+    border-radius: 1000px;
+    border: 1px solid #ccc;
+    color: #333;
+    background: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    text-align: center;
+    margin-bottom: 8px;
+    font-family: "Pretendard Variable";
+}
+
+#popup_wait_2 .market_info .adds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#popup_wait_2 .market_info .adds>li:first-child {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #333;
+    font-family: "Pretendard Variable";
+}
+
+#popup_wait_2 .market_info .adds>li:nth-child(2) {
+    font-family: "Montserrat";
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 137.5% */
+    
+    
+}
+
+#popup_wait_2 .market_info .adds>li:nth-child(3) {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#popup_wait_2 .market_info .adds>li:last-child {
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    color: #808080;
+}
+
+#popup_wait_1 .market_info .adds>li {
+    position: relative; 
+}
+
+#popup_wait_1 .market_info .adds>li::after,
+#popup_wait_2 .market_info .adds>li::after,
+#succese .market_info .adds>li::after,
+#fail .market_info .adds>li::after
+{
+    content: '';
+    position: absolute;
+    width: 4px; height: 4px; background: var(--mono-color-e-6-e-6-e-6, #E6E6E6);
+    border-radius: 100%; margin-top: 10px; margin-left: 8px;
+}
+#popup_wait_1 .market_info .adds>li:last-child::after,
+#popup_wait_2 .market_info .adds>li:last-child::after,
+#succese .market_info .adds>li:last-child::after,
+#fail .market_info .adds>li:last-child::after
+{
+    display: none;
+}
+
+/* 대기 번호 안내 박스 */
+#popup_wait_2 .wait_infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 340px; height: 213px;
+}
+
+
+
+
+
+/* 대기 번호 순서 박스 */
+
+#popup_wait_2 .wait_infor .wait_num {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#popup_wait_2 .wait_infor .wait_num li:first-child {
+    color: #000;
+
+    text-align: center;
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+}
+
+#popup_wait_2 .wait_infor  .wait_num li:nth-child(2) {
+    font-family: "Pretendard Variable";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 58px; /* 120.833% */
+    letter-spacing: -0.192px;
+    color: #ff4147;
+}
+
+#popup_wait_2 .wait_infor  .wait_num li:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+
+#popup_wait_2 .wait_infor  .wait_num li:last-child p{
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 17px; /* 141.667% */
+    letter-spacing: -0.048px;
+    color: #ff676c;
+}
+
+/* 대기 박스 아이콘 스타일 */
+/* #popup_wait_1 .wait_infor .wait_icon_box {
+
+} */
+
+#popup_wait_2 .border {
+    width: 1px;
+    height: 31px;
+    background: #fff;
+}
+
+/* 뒤로 가기 버튼 */
+#popup_wait_2 .wait_btn {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+#popup_wait_2 .wait_btn .back_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #fafafa;
+    border: 1px solid #e6e6e6;
+    color: #CCC;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#popup_wait_2 .wait_btn .next_btn {
+    width: 200px; height: 42px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #ff4147;
+    color: #fff;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+    letter-spacing: -0.064px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/* 예약 성공,실패 모달 */
+#succese,
+#fail{
+    width: 710px;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #FFF;
+    position: relative;
+    margin-bottom: 20px;
+}
+#succese .close_icon,
+#fail .close_icon{
+    width: 24px; height: 24px;
+    background: url("../images/icon/Close_square_light.png")no-repeat;
+    background-size: 24px 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+#succese>.title,
+#fail>.title{
+    color: #181818; 
+    text-align: center;
+
+    /* KO text 🇰🇷/title/sm */
+    font-family: "Pretendard Variable";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 31px; /* 129.167% */
+    letter-spacing: -0.096px;
+}
+
+#succese>.subtitle>img,
+#fail>.subtitle>img{
+	width:40px;
+	height:40px;
+}
+
+#succese .subtitle,
+#fail .subtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#succese .subtitle>.title,
+#fail .subtitle>.title{
+    color: var(--main-color-100, #FF4147);
+    text-align: center;
+    /* KO text 🇰🇷/body text/lg */
+    font-family: "Pretendard Variable";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px; /* 138.889% */
+}
+#succese .subtitle p,
+#fail .subtitle p{
+    color: var(--mono-color-808080, #808080);
+    text-align: center;
+    /* KO text 🇰🇷/caption/caption */
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px; /* 141.667% */
+}

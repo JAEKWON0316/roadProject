@@ -1,0 +1,421 @@
+.rsmain{
+    display: flex;
+width: 1920px;
+justify-content: center;
+align-items: center;
+}
+.rsmain>img{
+    width: 1920px;
+height: 400px;
+}
+.rsMainbox1{
+    display: flex;
+width: 953px;
+height: 400px;
+padding: 30px 483px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 48px;
+flex-shrink: 0;
+z-index: 999;
+position: absolute;
+}
+.rsMainlogoBox{
+    width: 379px;
+    height: 76px;
+    flex-shrink: 0;
+}
+
+.rsMainbox2{
+display: flex;
+width: 954px;
+flex-direction: column;
+align-items: center;
+gap: 48px;
+    margin-top:119px;
+}
+
+.rsMainbox2>div:first-of-type{
+display: flex;
+align-items: center;
+gap: 12px;
+align-self: stretch;
+font-size:36px;
+font-weight:600;
+
+}
+.rsMainbox2>div:first-of-type>img{
+    width: 33px;
+height: 33px;
+flex-shrink: 0;
+}
+.rsMainbox2>div:first-of-type>span{
+color: #FF4147;
+font-weight:500;
+}
+.rsbtnmain{
+display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+.rsbtnbox1{
+	display: flex;
+align-items: center;
+gap: 8px;
+flex: 1 0 0;
+}
+.rsbtn1{
+	display: flex;
+padding: 4px 12px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+border-radius: 1000px;
+background: var(--mono-color-333, #333);
+
+color: var(--mono-color-fff, #FFF);
+text-align: center;
+
+/* KO text 🇰🇷/body text/sm */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+
+}
+.rsbtn1>span{
+	color: var(--main-color-120, #EF353A);
+text-align: center;
+
+/* etc font 🇺🇸 (eng,num)/btn/md */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+.rsbtns{
+	display: flex;
+padding: 4px 12px;
+justify-content: center;
+align-items: center;
+gap: 4px;
+border-radius: 1000px;
+border: 1px solid var(--mono-color-e-6-e-6-e-6, #E6E6E6);
+background: var(--mono-color-fff, #FFF);
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* KO text 🇰🇷/body text/sm */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+}
+.rsbtns>span{
+	color: var(--mono-color-333, #333);
+text-align: center;
+
+/* etc font 🇺🇸 (eng,num)/btn/md */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+.rsbtnbox2{
+	display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
+color: var(--mono-color-808080, #808080);
+text-align: center;
+
+/* KO text 🇰🇷/body text/sm */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+}
+.rsbtnbox2>span{
+color: var(--main-color-100, #FF4147);
+text-align: center;
+
+/* KO text 🇰🇷/btn/text */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+text-decoration-line: underline;
+}
+
+.rsstorelist{
+	display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 32px;
+align-self: stretch;
+}
+.storelist{
+	display: flex;
+width: 953px;
+align-items: flex-start;
+gap: 21px;
+}
+.listsq{
+flex: 1 0 0;
+align-self: stretch;
+background: rgba(124, 124, 124, 0.20);
+width:224px;
+height:179px;
+}
+.listsq>img{
+	width: 24px;
+height: 24px;
+margin-top:12px;
+margin-left:12px;
+
+}
+.listview{
+	display: flex;
+padding: 8px;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-start;
+flex: 1 0 0;
+align-self: stretch;
+}
+.storesetting{
+display: flex;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+width:692px;
+}
+.storename{
+	display: flex;
+align-items: center;
+gap: 8px;
+align-self: stretch;
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* etc font 🇺🇸 (eng,num)/btn/md */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+width:474px;
+}
+.storename>span{
+	color: #000;
+text-align: center;
+
+/* KO text 🇰🇷/title/sm */
+font-family: "Pretendard Variable";
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: 31px; /* 129.167% */
+letter-spacing: -0.096px;
+}
+.storename>div{
+	display: flex;
+padding: 3px 8px;
+justify-content: center;
+align-items: center;
+border-radius: 1000px;
+border: 1px solid var(--mono-color-ccc, #CCC);
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* KO text 🇰🇷/caption/caption */
+font-family: "Pretendard Variable";
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 17px; /* 141.667% */
+letter-spacing: -0.048px;
+}
+.storerun{
+	display: flex;
+align-items: center;
+gap: 8px;
+color: var(--main-color-100, #FF4147);
+text-align: center;
+
+/* KO text 🇰🇷/body text/lg */
+font-family: "Pretendard Variable";
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: 25px; /* 138.889% */
+letter-spacing: -0.072px;
+}
+.storerun>span{
+	color: var(--main-color-100, #FF4147);
+text-align: center;
+
+/* KO text 🇰🇷/caption/caption - md */
+font-family: "Pretendard Variable";
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 17px; /* 141.667% */
+letter-spacing: -0.048px;
+}
+.storedetail{
+	display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 8px;
+align-self: stretch;
+}
+.storedetail1{
+	display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+color: var(--mono-color-808080, #808080);
+text-overflow: ellipsis;
+
+/* KO text 🇰🇷/body text/sm */
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+letter-spacing: -0.056px;
+}
+.storedetail2{
+display: flex;
+align-items: center;
+gap: 8px;
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* etc font 🇺🇸 (eng,num)/btn/md */
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;	
+}
+.storebtns{
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+align-self: stretch;
+border-radius: 8px;
+border: 1px solid var(--mono-color-e-6-e-6-e-6, #E6E6E6);
+background: var(--mono-color-fff, #FFF);	
+}
+.storebtns>div>img{
+	display: flex;
+width: 20px;
+height: 20px;
+justify-content: center;
+align-items: center;
+}
+.storebtn1{
+	display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+flex: 1 0 0;
+align-self: stretch;
+border-right: 1px solid var(--mono-color-e-6-e-6-e-6, #E6E6E6);
+color: var(--main-color-100, #FF4147);
+text-align: center;
+
+/* KO text 🇰🇷/btn/md */
+font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;
+}
+.storebtn2{
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+flex: 1 0 0;
+align-self: stretch;
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* KO text 🇰🇷/btn/md */
+font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;	
+}
+.storebtn3{
+display: flex;
+padding: 8px 16px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+flex: 1 0 0;
+align-self: stretch;
+color: var(--mono-color-333, #333);
+text-align: center;
+
+/* KO text 🇰🇷/btn/md */
+font-family: "Pretendard Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 22px; /* 137.5% */
+letter-spacing: -0.064px;	
+}
+.rspagebox{
+	display: flex;
+justify-content: center;
+align-items: center;
+gap: 2.002px;
+}
+.rspageboxs{
+	display: flex;
+width: 33px;
+height: 33px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 6px;
+}
+.rspageboxs_active{
+background: var(--main-color-100, #FF4147);
+color: var(--mono-color-fff, #FFF);
+font-family: "Pretendard Variable";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 19px; /* 135.714% */
+}
+.storebtn1:hover, .storebtn2:hover, .storebtn3:hover{
+	cursor:pointer;
+}
