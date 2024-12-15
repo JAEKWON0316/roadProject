@@ -919,7 +919,7 @@ public class HomeController {
 			        String nick = search.getNickname();
 			        int role = search.getRole();
 			        String buisness = search.getBuisness();
-			        String tel = search.getTel();
+			        String phone = search.getTel();
 			        System.out.println(nick);
 			     
 			        if(role == 2) {
@@ -933,16 +933,17 @@ public class HomeController {
 			            rdto = rdao.rSelectDetail(rbusiness);
 			            int rest_id = rdto.getId();
 			            System.out.println(rest_id);
- 			        	session.setAttribute("tel", tel);
+ 			        	session.setAttribute("phone", phone);
 			        	session.setAttribute("rest_id", rest_id);
 			        	
-			        	System.out.println("id : "+session.getAttribute("userid")+", nick : "+session.getAttribute("nickname")+", role : "+session.getAttribute("role")+", buisness : "+session.getAttribute("buisness")+", rest_id : "+session.getAttribute("rest_id"));
+			        	System.out.println("id : "+session.getAttribute("userid")+", nick : "+session.getAttribute("nickname")+", role : "+session.getAttribute("role")+", buisness : "+session.getAttribute("buisness")+", rest_id : "+session.getAttribute("rest_id")+", Phone : "+session.getAttribute("phone"));
 			        }else {
 			        	session.setAttribute("nickname", nick);
 			        	session.setAttribute("userid", userid);
 			        	session.setAttribute("role", role);
+			        	session.setAttribute("phone", phone);
 			        	
-			        	System.out.println("id : "+session.getAttribute("userid")+", nick : "+session.getAttribute("nickname")+", role : "+session.getAttribute("role"));
+			        	System.out.println("id : "+session.getAttribute("userid")+", nick : "+session.getAttribute("nickname")+", role : "+session.getAttribute("role")+", Phone : "+session.getAttribute("phone"));
 			        }
 			        
 			 
